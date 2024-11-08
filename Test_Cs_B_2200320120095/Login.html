@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            background-color: rgba(196, 255, 255, 0.808);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 15px;
+            width: 40%;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="div1">
+            <center><h2>Login</h2></center>
+                User ID: <input type="text" id="userId"><br>
+                Password: <input type="text" id="password"><br>
+                <button type="button" onclick="validations()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function validations(){
+            const userId = document.querySelector('#userId').value;
+            const password = document.querySelector('#password').value;
+            if(password.length<5)
+        {
+            alert("Password length atleast 5 character")
+        }
+            if (userId === "admin" && password === "admin") {
+                window.location.href = "wheather.html";
+            } else {
+                alert("Invalid User ID or Password.");
+            }
+        }
+
+    </script>
+</body>
+</html>
